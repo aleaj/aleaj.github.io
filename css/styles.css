@@ -884,3 +884,99 @@ i, img, svg {
     background: var(--bright-amber);
     color: var(--cerulean);
 }
+
+/* ===== COLOR UTILITY CLASSES ===== */
+/* Use these classes to add emphasis colors to your content */
+
+/* Text Colors */
+.text-turquoise { color: var(--turquoise-surf) !important; }
+.text-cerulean { color: var(--cerulean) !important; }
+.text-amber { color: var(--bright-amber) !important; }
+.text-papaya { color: var(--papaya-whip) !important; }
+.text-scarlet { color: var(--primary-scarlet) !important; }
+
+/* Background Colors */
+.bg-turquoise {
+    background-color: var(--turquoise-surf) !important;
+    color: var(--papaya-whip) !important;
+}
+.bg-cerulean {
+    background-color: var(--cerulean) !important;
+    color: var(--papaya-whip) !important;
+}
+.bg-amber {
+    background-color: var(--bright-amber) !important;
+    color: var(--cerulean) !important;
+}
+.bg-papaya {
+    background-color: var(--papaya-whip) !important;
+    color: var(--cerulean) !important;
+}
+.bg-scarlet {
+    background-color: var(--primary-scarlet) !important;
+    color: var(--papaya-whip) !important;
+}
+
+/* Emphasis Boxes */
+.emphasis-box {
+    padding: 1rem 1.5rem;
+    border-radius: var(--border-radius);
+    margin: 1rem 0;
+    border-left: 4px solid;
+}
+
+.emphasis-turquoise {
+    background: rgba(6, 174, 213, 0.1);
+    border-left-color: var(--turquoise-surf);
+    color: var(--cerulean);
+}
+
+.emphasis-amber {
+    background: rgba(240, 200, 8, 0.1);
+    border-left-color: var(--bright-amber);
+    color: var(--cerulean);
+}
+
+.emphasis-scarlet {
+    background: rgba(221, 28, 26, 0.1);
+    border-left-color: var(--primary-scarlet);
+    color: var(--primary-scarlet);
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .emphasis-turquoise {
+    background: rgba(6, 174, 213, 0.2);
+    color: var(--turquoise-surf);
+}
+
+[data-theme="dark"] .emphasis-amber {
+    background: rgba(240, 200, 8, 0.2);
+    color: var(--bright-amber);
+}
+
+[data-theme="dark"] .emphasis-scarlet {
+    background: rgba(221, 28, 26, 0.2);
+    color: var(--primary-scarlet);
+}
+
+/* Highlight spans */
+.highlight {
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.highlight-turquoise {
+    background: var(--turquoise-surf);
+    color: var(--papaya-whip);
+}
+
+.highlight-amber {
+    background: var(--bright-amber);
+    color: var(--cerulean);
+}
+
+.highlight-scarlet {
+    background: var(--primary-scarlet);
+    color: var(--papaya-whip);
+}

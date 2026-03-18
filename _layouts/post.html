@@ -10,7 +10,7 @@ layout: default
             {% if page.categories %}
             in
             {% for category in page.categories %}
-                <span style="background: var(--bg-light); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.9rem;">{{ category }}</span>
+                <span class="category-tag">{{ category }}</span>
             {% endfor %}
             {% endif %}
         </p>
@@ -26,7 +26,7 @@ layout: default
                 <div class="text-center">
                     <p><strong>Enjoyed this post?</strong></p>
                     <div class="professional-links" style="justify-content: center; margin-top: 1rem;">
-                        <a href="mailto:{{ site.author.email }}?subject=Re: {{ page.title }}" class="professional-link">
+                        <a href="mailto:{{ site.data.personal.email }}?subject=Re: {{ page.title }}" class="professional-link">
                             <i class="fas fa-envelope"></i>
                             Email Me
                         </a>

@@ -41,9 +41,9 @@ body {
     --error-color: var(--primary-scarlet);
     --text-light: #6c7983;
     --text-dark: var(--cerulean);
-    --bg-light: var(--papaya-whip);
-    --bg-main: #ffffff;
-    --border-light: #e2e8f0;
+    --bg-light: #f8f4e6;
+    --bg-main: var(--papaya-whip);
+    --border-light: #e2d3b7;
     --card-bg: #ffffff;
 
     /* Layout & Effects */
@@ -58,20 +58,20 @@ body {
 
 /* Dark Theme Variables */
 [data-theme="dark"] {
-    --primary-color: var(--turquoise-surf);
-    --secondary-color: var(--bright-amber);
-    --accent-color: var(--turquoise-surf);
-    --accent-hover: var(--bright-amber);
-    --warning-color: var(--bright-amber);
-    --error-color: #ff6b6b;
-    --text-light: #94a3b8;
-    --text-dark: #e2e8f0;
-    --bg-light: #1e293b;
-    --bg-main: #0f172a;
-    --border-light: #334155;
-    --card-bg: #1e293b;
-    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    --box-shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.4);
+    --primary-color: var(--bright-amber);
+    --secondary-color: var(--turquoise-surf);
+    --accent-color: var(--bright-amber);
+    --accent-hover: var(--turquoise-surf);
+    --warning-color: var(--primary-scarlet);
+    --error-color: var(--primary-scarlet);
+    --text-light: var(--papaya-whip);
+    --text-dark: var(--papaya-whip);
+    --bg-light: #0a537a;
+    --bg-main: var(--cerulean);
+    --border-light: var(--turquoise-surf);
+    --card-bg: #0a4d6e;
+    --box-shadow: 0 4px 12px rgba(6, 174, 213, 0.2);
+    --box-shadow-hover: 0 8px 25px rgba(6, 174, 213, 0.3);
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -740,13 +740,38 @@ a:hover {
 
 [data-theme="dark"] .profile-image {
     border-color: var(--bright-amber);
-    box-shadow: 0 8px 25px rgba(240, 200, 8, 0.2);
+    box-shadow: 0 8px 25px rgba(240, 200, 8, 0.3);
 }
 
 [data-theme="dark"] .professional-link:hover,
 [data-theme="dark"] .research-link:hover,
 [data-theme="dark"] .footer-link:hover {
-    color: var(--bg-main);
+    color: var(--cerulean);
+    background: var(--bright-amber);
+}
+
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.active {
+    color: var(--bright-amber);
+}
+
+[data-theme="dark"] .nav-link.active::after {
+    background: var(--bright-amber);
+}
+
+[data-theme="dark"] .blog-post-card:hover,
+[data-theme="dark"] .research-item:hover {
+    border-color: var(--bright-amber);
+}
+
+/* Light theme specific enhancements */
+[data-theme="light"] .hero {
+    background: linear-gradient(135deg, var(--papaya-whip) 0%, var(--bg-light) 50%, var(--papaya-whip) 100%);
+}
+
+[data-theme="light"] .profile-image {
+    border-color: var(--turquoise-surf);
+    box-shadow: 0 8px 25px rgba(6, 174, 213, 0.2);
 }
 
 /* Smooth theme transition for all elements */
@@ -809,4 +834,53 @@ i, img, svg {
 [data-theme="dark"] .research-authors,
 [data-theme="dark"] .resume-date {
     color: var(--secondary-color);
+}
+
+/* Additional color enhancements */
+.page-header {
+    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-main) 100%);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+[data-theme="dark"] .page-header {
+    border-bottom: 2px solid var(--bright-amber);
+}
+
+/* Button and link enhancements */
+.professional-link,
+.research-link {
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-light) 100%);
+    border: 2px solid var(--accent-color);
+}
+
+[data-theme="dark"] .professional-link,
+[data-theme="dark"] .research-link {
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-light) 100%);
+    border: 2px solid var(--turquoise-surf);
+}
+
+/* Navigation enhancements */
+.nav-logo-link:hover {
+    color: var(--accent-color);
+}
+
+[data-theme="dark"] .nav-logo-link:hover {
+    color: var(--bright-amber);
+}
+
+/* Category tags styling */
+.category-tag {
+    background: var(--accent-color);
+    color: var(--bg-main);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--border-radius);
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0 0.25rem;
+    display: inline-block;
+}
+
+[data-theme="dark"] .category-tag {
+    background: var(--bright-amber);
+    color: var(--cerulean);
 }

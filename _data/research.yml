@@ -3,131 +3,107 @@
 
 # Published Papers
 publications:
-  - title: "[Paper Title]: [Subtitle if applicable]"
-    authors: "**Your Name**, Co-author Name, Another Co-author"
-    venue: "[Conference/Journal Name] [Year]"
-    venue_details: "[Conference Location or Journal Volume/Issue]"
+  - title: "Quantum Coherence in Superconducting Circuits"
+    authors: "**Alejandro Andres Juanes**, Dr. Supervisor, Dr. Collaborator"
+    venue: "Physical Review Applied 2024"
+    venue_details: "Volume X, Issue Y"
     description: |
-      [Brief description of the paper's contribution and significance. What problem does it solve?
-      What are the key findings or innovations?]
+      Investigation of quantum coherence properties in superconducting circuit architectures.
+      This work explores the fundamental limits of coherence in engineered quantum systems
+      and proposes methods for its enhancement.
     links:
       - name: "Paper"
+        url: "#"
+      - name: "arXiv"
+        url: "#"
+
+  - title: "Microwave Photon Interactions in Circuit QED"
+    authors: "**Alejandro Andres Juanes**, Research Team"
+    venue: "Under Review"
+    venue_details: "Submitted to Physical Review Letters"
+    description: |
+      Study of microwave photon interactions in circuit quantum electrodynamics systems,
+      exploring new regimes of light-matter interaction at the quantum level.
+    links:
+      - name: "Preprint"
         url: "#"
       - name: "Code"
-        url: "#"
-      - name: "Data"
-        url: "#"
-      - name: "Video"
-        url: "#"
-
-  - title: "[Another Paper Title]"
-    authors: "Co-author Name, **Your Name**, Final Co-author"
-    venue: "[Journal Name] [Year]"
-    venue_details: "[Volume/Issue Numbers]"
-    description: |
-      [Description of this paper's contribution. Focus on the impact and novelty of the work.
-      What makes this research important?]
-    links:
-      - name: "Paper"
-        url: "#"
-      - name: "Supplementary"
-        url: "#"
-      - name: "BibTeX"
-        url: "#"
-
-  - title: "[Third Paper Title]"
-    authors: "**Your Name**, Advisor Name"
-    venue: "[Workshop/Conference Name] [Year]"
-    venue_details: "[Location or Publication Details]"
-    description: |
-      [Description highlighting the key contributions and methodology. What techniques were used?
-      What were the main results?]
-    links:
-      - name: "Paper"
-        url: "#"
-      - name: "Poster"
-        url: "#"
-      - name: "Slides"
         url: "#"
 
 # Papers Under Review or Preprints
 preprints:
-  - title: "[Preprint or Submitted Paper]"
-    authors: "**Your Name**, Collaborator Name, Senior Author"
-    venue: "Under Review"
-    venue_details: "Submitted to [Target Venue]"
+  - title: "Novel Approaches to Quantum State Preparation"
+    authors: "**Alejandro Andres Juanes**, International Collaborators"
+    venue: "In Preparation"
+    venue_details: "Target: Nature Physics"
     description: |
-      [Description of ongoing work. What are the preliminary findings? What is the expected impact?]
+      Development of new protocols for preparing quantum states in superconducting
+      circuit platforms with applications to quantum information processing.
     links:
-      - name: "Preprint"
-        url: "#"
-      - name: "Code (Coming Soon)"
+      - name: "Draft Available Soon"
         url: "#"
 
 # Current Research Projects
 projects:
-  - title: "[Project Name]"
-    funding: "[Funding Agency]"
-    duration: "[Project Duration]"
-    role: "[Role: PI/Co-PI/Researcher]"
+  - title: "Quantum Optics in Superconducting Circuits"
+    funding: "ISTA PhD Fellowship"
+    duration: "2023 - 2027"
+    role: "PhD Researcher"
     description: |
-      [Description of the project goals, methodology, and expected outcomes.
-      What problem is being addressed? Who are the collaborators?]
+      Comprehensive study of quantum optical phenomena in superconducting circuit
+      architectures, including photon statistics, entanglement generation, and
+      quantum state manipulation.
     links:
-      - name: "Project Page"
-        url: "#"
-      - name: "Progress Reports"
+      - name: "Project Info"
         url: "#"
 
-  - title: "[Another Project]"
-    funding: "[Collaborative Project]"
-    duration: "[Timeline]"
-    role: "[Institution Partners]"
+  - title: "Microwave Quantum Technologies"
+    funding: "European Collaboration Grant"
+    duration: "2024 - 2026"
+    role: "Research Collaborator"
     description: |
-      [Project description focusing on your specific contributions and the interdisciplinary
-      aspects of the work.]
+      International collaboration on developing microwave-based quantum technologies
+      for quantum computing and quantum sensing applications.
     links:
-      - name: "Collaboration Info"
-        url: "#"
-      - name: "Preliminary Results"
+      - name: "Collaboration Page"
         url: "#"
 
 # Presentations and Talks
 presentations:
-  - title: "[Talk Title]"
-    event: "[Conference/Event Name]"
-    location: "[Location]"
-    date: "[Date]"
-    type: "conference"  # conference, invited, poster
-    description: "[Brief description of the talk and its reception]"
+  - title: "Quantum Coherence in Circuit QED Systems"
+    event: "European Quantum Technologies Conference"
+    location: "Vienna, Austria"
+    date: "March 2024"
+    type: "conference"
+    description: "Oral presentation on recent findings in circuit quantum electrodynamics"
 
-  - title: "[Invited Seminar Title]"
-    event: "[Department/Institution]"
-    location: "[Location]"
-    date: "[Date]"
+  - title: "Superconducting Circuits for Quantum Information"
+    event: "ISTA Physics Seminar"
+    location: "Klosterneuburg, Austria"
+    date: "February 2024"
     type: "invited"
-    description: "[Details about the invited talk]"
+    description: "Invited seminar on applications of superconducting circuits in quantum technologies"
 
-  - title: "[Poster Presentation]"
-    event: "[Event Name]"
-    location: "[Location]"
-    date: "[Date]"
+  - title: "Microwave Quantum Optics: Theory and Experiment"
+    event: "Austrian Physical Society Meeting"
+    location: "Salzburg, Austria"
+    date: "September 2023"
     type: "poster"
-    description: "[Poster details and any awards received]"
+    description: "Poster presentation on theoretical and experimental aspects of microwave quantum optics"
 
 # Current Collaborators
 collaborators:
-  - name: "[Collaborator Name]"
-    institution: "[Institution]"
-    topic: "working on [topic]"
+  - name: "Dr. Research Supervisor"
+    institution: "Institute of Science and Technology Austria"
+    topic: "quantum optics and superconducting circuits"
     url: "#"
 
-  - name: "[Another Collaborator]"
-    institution: "[Institution]"
-    topic: "working on [topic]"
+  - name: "Prof. International Collaborator"
+    institution: "University of Quantum Physics"
+    topic: "circuit quantum electrodynamics"
     url: "#"
 
-  - name: "[Third Collaborator]"
-    institution: "[Institution]"
-    topic: "working on [topic]"
+  - name: "Dr. Theory Collaborator"
+    institution: "Max Planck Institute"
+    topic: "theoretical quantum optics"
     url: "#"

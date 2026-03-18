@@ -3,96 +3,79 @@
 
 # Education
 education:
-  - degree: "Ph.D. in [Field]"
-    institution: "[University Name]"
-    location: "[City, State/Country]"
-    start_year: "[Start Year]"
-    end_year: "[End Year]"
-    dissertation: "[Dissertation Title]"
-    advisor: "[Advisor Name]"
+  - degree: "Ph.D. in Physics"
+    institution: "Institute of Science and Technology Austria (ISTA)"
+    location: "Klosterneuburg, Austria"
+    start_year: "2023"
+    end_year: "Present"
+    dissertation: "Microwave Quantum Optics in Superconducting Circuits"
+    advisor: "Dr. [Advisor Name]"
     details:
-      - "Research focus on [research area]"
-      - "[Achievement or notable coursework]"
-      - "[Any awards or distinctions]"
+      - "Research focus on microwave quantum optics and superconducting circuits"
+      - "Coursework in quantum optics, condensed matter physics, and quantum information"
+      - "Teaching assistant for undergraduate physics courses"
 
-  - degree: "M.S./B.S. in [Field]"
-    institution: "[University Name]"
-    location: "[City, State/Country]"
-    start_year: "[Start Year]"
-    end_year: "[End Year]"
-    gpa: "[if relevant]"  # Optional field
+  - degree: "Master's in Physics"
+    institution: "University of [Previous Institution]"
+    location: "Location"
+    start_year: "2020"
+    end_year: "2023"
     details:
-      - "[Relevant coursework or projects]"
-      - "[Academic honors or achievements]"
-      - "[Additional accomplishments]"
+      - "Thesis on quantum optics and superconducting devices"
+      - "Graduated with honors"
+      - "Relevant coursework in quantum mechanics and statistical physics"
 
 # Professional Experience
 experience:
-  - title: "[Job Title]"
-    company: "[Company/Institution Name]"
-    location: "[City, State/Country]"
-    start_date: "[Start Date]"
-    end_date: "Present"  # Use "Present" for current position
+  - title: "Research Assistant"
+    company: "Institute of Science and Technology Austria (ISTA)"
+    location: "Klosterneuburg, Austria"
+    start_date: "2023"
+    end_date: "Present"
     responsibilities:
-      - "[Key responsibility or achievement]"
-      - "[Another responsibility or project]"
-      - "[Quantifiable result or impact]"
-      - "[Skills or technologies used]"
+      - "Conducting research in microwave quantum optics"
+      - "Design and implementation of superconducting circuit experiments"
+      - "Analysis of quantum phenomena in engineered systems"
+      - "Collaboration with international research groups"
 
-  - title: "[Previous Job Title]"
-    company: "[Company/Institution Name]"
-    location: "[City, State/Country]"
-    start_date: "[Start Date]"
-    end_date: "[End Date]"
+  - title: "Graduate Research Student"
+    company: "University of [Previous Institution]"
+    location: "Location"
+    start_date: "2020"
+    end_date: "2023"
     responsibilities:
-      - "[Key responsibility or achievement]"
-      - "[Another responsibility or project]"
-      - "[Quantifiable result or impact]"
-      - "[Skills or technologies used]"
-
-  - title: "[Earlier Job Title]"
-    company: "[Company/Institution Name]"
-    location: "[City, State/Country]"
-    start_date: "[Start Date]"
-    end_date: "[End Date]"
-    responsibilities:
-      - "[Key responsibility or achievement]"
-      - "[Another responsibility or project]"
-      - "[Skills or technologies used]"
+      - "Theoretical and experimental work in quantum optics"
+      - "Laboratory experience with cryogenic systems"
+      - "Data analysis using Python and MATLAB"
 
 # Awards and Recognition
 awards:
-  - name: "[Award Name]"
-    organization: "[Awarding Organization]"
-    year: "[Year]"
-    description: "[Brief description of the award and why it was received]"
+  - name: "Graduate Fellowship"
+    organization: "Institute of Science and Technology Austria"
+    year: "2023"
+    description: "Competitive fellowship for PhD studies in physics"
 
-  - name: "[Another Award]"
-    organization: "[Awarding Organization]"
-    year: "[Year]"
-    description: "[Brief description of the award]"
+  - name: "Academic Excellence Award"
+    organization: "University of [Previous Institution]"
+    year: "2023"
+    description: "Recognition for outstanding academic performance in physics"
 
 # Professional Activities
 professional_activities:
   editorial:
-    - "Reviewer for [Journal Names]"
-    - "Program Committee Member for [Conference Names]"
-    - "[Other editorial activities]"
+    - "Reviewer for student physics journals"
+    - "Member of graduate student physics society"
 
   memberships:
-    - "[Professional Organization 1]"
-    - "[Professional Organization 2]"
-    - "[Professional Organization 3]"
+    - "American Physical Society (APS)"
+    - "European Physical Society (EPS)"
+    - "Austrian Physical Society"
 
   teaching:
-    - position: "Teaching Assistant for [Course Name]"
-      institution: "[University]"
-      year: "[Year]"
+    - position: "Teaching Assistant for Introduction to Physics"
+      institution: "ISTA"
+      year: "2023-2024"
 
-    - position: "Guest Lecturer for [Course Name]"
-      institution: "[University]"
-      year: "[Year]"
-
-    - position: "Mentored X undergraduate/graduate students"
-      institution: "[University]"
-      year: "[Year Range]"
+    - position: "Tutor for Quantum Mechanics"
+      institution: "University of [Previous Institution]"
+      year: "2022-2023"

@@ -1,47 +1,48 @@
 # Personal Information
 name: "Alejandro Andres Juanes"
 email: "Alejandro.AndresJuanes@ista.ac.at"
-title: "Researcher & Developer"
-subtitle: "PhD Student in Computer Science"
+title: "PhD Student in Physics"
+subtitle: "Superconducting Circuits & Quantum Optics"
 bio: |
-  Welcome to my personal website! I'm a passionate researcher and developer working on [your field of interest].
-  Here you'll find information about my research, professional experience, and thoughts on [your areas of expertise].
+  Welcome to my personal website! I'm a PhD student in physics working on superconducting circuits.
+  Here you'll find information about my research, professional experience, and some personal thoughts.
 
 extended_bio: |
-  Currently, I'm [current position/studies] at [institution/company], focusing on [research areas or projects].
-  My work involves [brief description of your work/research focus].
+  Currently, I'm pursuing my PhD at the Institute of Science and Technology Austria (ISTA),
+  focusing on microwave quantum optics and superconducting circuits. My work involves exploring
+  the quantum properties of light-matter interactions in these systems.
 
 # About section
 about: |
-  I am a [your profession/field] with a passion for [your interests]. My research focuses on [research areas],
-  and I have experience in [key skills/technologies]. I enjoy [personal interests] and am always eager to
-  collaborate on exciting projects.
+  I am a physics researcher with a passion for quantum optics and superconducting circuits. My research focuses on
+  microwave quantum optics, and I have experience in quantum information processing and experimental physics.
+  I enjoy tackling complex problems at the intersection of theory and experiment, and am always eager to
+  collaborate on exciting projects in quantum physics.
 
 about_extended: |
-  My academic journey began at [university] where I studied [degree]. Since then, I've [brief career progression].
-  I'm particularly interested in [specific research interests] and how they can [impact/application].
+  My academic journey began with a strong foundation in physics, and since then, I've focused on the fascinating
+  world of quantum optics and superconducting circuits. I'm particularly interested in how quantum mechanics
+  manifests in engineered systems and how we can harness these phenomena for quantum technologies.
 
 # Current status/news
 current_status: |
-  I'm currently working on [current project/research] and looking forward to [upcoming events/goals].
+  I'm currently working on microwave quantum optics experiments and looking forward to new discoveries
+  in the field of superconducting quantum devices.
 
 # Research interests
 research_interests:
-  - title: "[Research Area 1]"
-    description: "[Brief description of your interest and expertise in this area. What specific problems do you work on?]"
+  - title: "Microwave Quantum Optics"
+    description: "I'm interested in the interaction of microwave photons with superconducting circuits, exploring phenomena such as quantum coherence, entanglement, and non-classical states of light. My work aims to understand and harness these interactions for applications in quantum information processing and quantum communication."
 
-  - title: "[Research Area 2]"
-    description: "[Description of another key research interest and how it connects to your other work.]"
+  - title: "Superconducting Circuits"
+    description: "Investigation of superconducting quantum devices and their applications in quantum computing and quantum sensing. I focus on understanding the fundamental physics of these artificial atoms and their interactions with electromagnetic fields."
 
-  - title: "[Research Area 3]"
-    description: "[Third area of expertise and your unique perspective on this field.]"
-
-  - title: "[Research Area 4]"
-    description: "[Brief description]"
+  - title: "Quantum Information Processing"
+    description: "Exploring how quantum mechanical principles can be used to process and transmit information in ways that are impossible with classical systems, particularly using superconducting circuit architectures."
 
 # Skills and Technologies
 skills:
-  programming_languages: "Python, R, JavaScript, Java, C++, SQL, MATLAB, [others]"
-  tools_frameworks: "TensorFlow, PyTorch, scikit-learn, pandas, numpy, Git, Docker, AWS, [others]"
-  research_methods: "Statistical Analysis, Machine Learning, Data Visualization, Experimental Design, [others]"
-  languages: "English (Native), [Other languages and proficiency levels]"
+  programming_languages: "Python, MATLAB, C++, LabVIEW"
+  tools_frameworks: "QuTiP, Qiskit, NumPy, SciPy, Matplotlib, Git"
+  research_methods: "Quantum Physics, Experimental Design, Data Analysis, Microwave Engineering, Cryogenics"
+  languages: "Spanish (Native), English (Fluent), German (Basic)"

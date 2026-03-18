@@ -1,0 +1,43 @@
+---
+layout: default
+title: "Debug"
+---
+
+<div class="page-content">
+    <div class="container">
+        <h1>Debug Information</h1>
+
+        <h2>Personal Data</h2>
+        <p><strong>Name:</strong> {{ site.data.personal.name | default: "NOT FOUND" }}</p>
+        <p><strong>Email:</strong> {{ site.data.personal.email | default: "NOT FOUND" }}</p>
+        <p><strong>Title:</strong> {{ site.data.personal.title | default: "NOT FOUND" }}</p>
+        <p><strong>Bio:</strong> {{ site.data.personal.bio | default: "NOT FOUND" }}</p>
+
+        <h2>Navigation</h2>
+        <ul>
+        {% for nav_item in site.navigation %}
+            <li>{{ nav_item.name }} - {{ nav_item.url }}</li>
+        {% else %}
+            <li>NO NAVIGATION FOUND</li>
+        {% endfor %}
+        </ul>
+
+        <h2>Links</h2>
+        <ul>
+        {% for link in site.data.links.main_links %}
+            <li>{{ link.name }} - {{ link.url }}</li>
+        {% else %}
+            <li>NO LINKS FOUND</li>
+        {% endfor %}
+        </ul>
+
+        <h2>Research Interests</h2>
+        <ul>
+        {% for interest in site.data.personal.research_interests %}
+            <li><strong>{{ interest.title }}:</strong> {{ interest.description }}</li>
+        {% else %}
+            <li>NO RESEARCH INTERESTS FOUND</li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>

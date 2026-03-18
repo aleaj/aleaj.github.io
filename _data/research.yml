@@ -1,0 +1,133 @@
+# Research Publications and Projects
+# Add your publications, projects, and presentations here
+
+# Published Papers
+publications:
+  - title: "[Paper Title]: [Subtitle if applicable]"
+    authors: "**Your Name**, Co-author Name, Another Co-author"
+    venue: "[Conference/Journal Name] [Year]"
+    venue_details: "[Conference Location or Journal Volume/Issue]"
+    description: |
+      [Brief description of the paper's contribution and significance. What problem does it solve?
+      What are the key findings or innovations?]
+    links:
+      - name: "Paper"
+        url: "#"
+      - name: "Code"
+        url: "#"
+      - name: "Data"
+        url: "#"
+      - name: "Video"
+        url: "#"
+
+  - title: "[Another Paper Title]"
+    authors: "Co-author Name, **Your Name**, Final Co-author"
+    venue: "[Journal Name] [Year]"
+    venue_details: "[Volume/Issue Numbers]"
+    description: |
+      [Description of this paper's contribution. Focus on the impact and novelty of the work.
+      What makes this research important?]
+    links:
+      - name: "Paper"
+        url: "#"
+      - name: "Supplementary"
+        url: "#"
+      - name: "BibTeX"
+        url: "#"
+
+  - title: "[Third Paper Title]"
+    authors: "**Your Name**, Advisor Name"
+    venue: "[Workshop/Conference Name] [Year]"
+    venue_details: "[Location or Publication Details]"
+    description: |
+      [Description highlighting the key contributions and methodology. What techniques were used?
+      What were the main results?]
+    links:
+      - name: "Paper"
+        url: "#"
+      - name: "Poster"
+        url: "#"
+      - name: "Slides"
+        url: "#"
+
+# Papers Under Review or Preprints
+preprints:
+  - title: "[Preprint or Submitted Paper]"
+    authors: "**Your Name**, Collaborator Name, Senior Author"
+    venue: "Under Review"
+    venue_details: "Submitted to [Target Venue]"
+    description: |
+      [Description of ongoing work. What are the preliminary findings? What is the expected impact?]
+    links:
+      - name: "Preprint"
+        url: "#"
+      - name: "Code (Coming Soon)"
+        url: "#"
+
+# Current Research Projects
+projects:
+  - title: "[Project Name]"
+    funding: "[Funding Agency]"
+    duration: "[Project Duration]"
+    role: "[Role: PI/Co-PI/Researcher]"
+    description: |
+      [Description of the project goals, methodology, and expected outcomes.
+      What problem is being addressed? Who are the collaborators?]
+    links:
+      - name: "Project Page"
+        url: "#"
+      - name: "Progress Reports"
+        url: "#"
+
+  - title: "[Another Project]"
+    funding: "[Collaborative Project]"
+    duration: "[Timeline]"
+    role: "[Institution Partners]"
+    description: |
+      [Project description focusing on your specific contributions and the interdisciplinary
+      aspects of the work.]
+    links:
+      - name: "Collaboration Info"
+        url: "#"
+      - name: "Preliminary Results"
+        url: "#"
+
+# Presentations and Talks
+presentations:
+  - title: "[Talk Title]"
+    event: "[Conference/Event Name]"
+    location: "[Location]"
+    date: "[Date]"
+    type: "conference"  # conference, invited, poster
+    description: "[Brief description of the talk and its reception]"
+
+  - title: "[Invited Seminar Title]"
+    event: "[Department/Institution]"
+    location: "[Location]"
+    date: "[Date]"
+    type: "invited"
+    description: "[Details about the invited talk]"
+
+  - title: "[Poster Presentation]"
+    event: "[Event Name]"
+    location: "[Location]"
+    date: "[Date]"
+    type: "poster"
+    description: "[Poster details and any awards received]"
+
+# Current Collaborators
+collaborators:
+  - name: "[Collaborator Name]"
+    institution: "[Institution]"
+    topic: "working on [topic]"
+    url: "#"
+
+  - name: "[Another Collaborator]"
+    institution: "[Institution]"
+    topic: "working on [topic]"
+    url: "#"
+
+  - name: "[Third Collaborator]"
+    institution: "[Institution]"
+    topic: "working on [topic]"
+    url: "#"

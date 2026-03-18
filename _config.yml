@@ -1,10 +1,10 @@
 # GitHub Pages Configuration
 title: "Alejandro Andres Juanes"
-description: "Welcome to my personal website"
+description: "Personal website of Alejandro Andres Juanes - researcher and developer"
 url: "https://aleaj.github.io"
 baseurl: ""
 
-# Author information
+# Author information (keep for Jekyll compatibility)
 author:
   name: "Alejandro Andres Juanes"
   email: "Alejandro.AndresJuanes@ista.ac.at"
@@ -48,3 +48,20 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
+
+# Site Configuration (you can customize these)
+# Navigation menu
+navigation:
+  - name: "Home"
+    url: "/"
+  - name: "Resume"
+    url: "/resume/"
+  - name: "Research"
+    url: "/research/"
+  - name: "Blog"
+    url: "/blog/"
+
+# Homepage settings
+homepage:
+  show_latest_posts: true
+  posts_count: 3

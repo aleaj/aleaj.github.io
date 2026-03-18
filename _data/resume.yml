@@ -1,0 +1,98 @@
+# Resume/CV Data
+# Update with your education and experience information
+
+# Education
+education:
+  - degree: "Ph.D. in [Field]"
+    institution: "[University Name]"
+    location: "[City, State/Country]"
+    start_year: "[Start Year]"
+    end_year: "[End Year]"
+    dissertation: "[Dissertation Title]"
+    advisor: "[Advisor Name]"
+    details:
+      - "Research focus on [research area]"
+      - "[Achievement or notable coursework]"
+      - "[Any awards or distinctions]"
+
+  - degree: "M.S./B.S. in [Field]"
+    institution: "[University Name]"
+    location: "[City, State/Country]"
+    start_year: "[Start Year]"
+    end_year: "[End Year]"
+    gpa: "[if relevant]"  # Optional field
+    details:
+      - "[Relevant coursework or projects]"
+      - "[Academic honors or achievements]"
+      - "[Additional accomplishments]"
+
+# Professional Experience
+experience:
+  - title: "[Job Title]"
+    company: "[Company/Institution Name]"
+    location: "[City, State/Country]"
+    start_date: "[Start Date]"
+    end_date: "Present"  # Use "Present" for current position
+    responsibilities:
+      - "[Key responsibility or achievement]"
+      - "[Another responsibility or project]"
+      - "[Quantifiable result or impact]"
+      - "[Skills or technologies used]"
+
+  - title: "[Previous Job Title]"
+    company: "[Company/Institution Name]"
+    location: "[City, State/Country]"
+    start_date: "[Start Date]"
+    end_date: "[End Date]"
+    responsibilities:
+      - "[Key responsibility or achievement]"
+      - "[Another responsibility or project]"
+      - "[Quantifiable result or impact]"
+      - "[Skills or technologies used]"
+
+  - title: "[Earlier Job Title]"
+    company: "[Company/Institution Name]"
+    location: "[City, State/Country]"
+    start_date: "[Start Date]"
+    end_date: "[End Date]"
+    responsibilities:
+      - "[Key responsibility or achievement]"
+      - "[Another responsibility or project]"
+      - "[Skills or technologies used]"
+
+# Awards and Recognition
+awards:
+  - name: "[Award Name]"
+    organization: "[Awarding Organization]"
+    year: "[Year]"
+    description: "[Brief description of the award and why it was received]"
+
+  - name: "[Another Award]"
+    organization: "[Awarding Organization]"
+    year: "[Year]"
+    description: "[Brief description of the award]"
+
+# Professional Activities
+professional_activities:
+  editorial:
+    - "Reviewer for [Journal Names]"
+    - "Program Committee Member for [Conference Names]"
+    - "[Other editorial activities]"
+
+  memberships:
+    - "[Professional Organization 1]"
+    - "[Professional Organization 2]"
+    - "[Professional Organization 3]"
+
+  teaching:
+    - position: "Teaching Assistant for [Course Name]"
+      institution: "[University]"
+      year: "[Year]"
+
+    - position: "Guest Lecturer for [Course Name]"
+      institution: "[University]"
+      year: "[Year]"
+
+    - position: "Mentored X undergraduate/graduate students"
+      institution: "[University]"
+      year: "[Year Range]"

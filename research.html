@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Research"
-description: "Research work and publications by [Your Name]"
+description: "Research work and publications by {{ site.data.personal.name }}"
 ---
 
 <div class="page-header">
@@ -25,193 +25,119 @@ description: "Research work and publications by [Your Name]"
             </p>
         </div>
 
+        {% if site.data.research.publications %}
         <div class="content-section">
             <h2>Publications</h2>
-
             <div class="research-grid">
+                {% for paper in site.data.research.publications %}
                 <div class="research-item">
-                    <h3 class="research-title">[Paper Title]: [Subtitle if applicable]</h3>
-                    <p class="research-authors">
-                        <strong>Your Name</strong>, Co-author Name, Another Co-author
-                    </p>
-                    <p class="research-venue">
-                        [Conference/Journal Name] [Year] • [Conference Location or Journal Volume/Issue]
-                    </p>
-                    <p class="research-description">
-                        [Brief description of the paper's contribution and significance. What problem does it solve?
-                        What are the key findings or innovations?]
-                    </p>
+                    <h3 class="research-title">{{ paper.title }}</h3>
+                    <p class="research-authors">{{ paper.authors }}</p>
+                    <p class="research-venue">{{ paper.venue }}{% if paper.venue_details %} • {{ paper.venue_details }}{% endif %}</p>
+                    {% if paper.description %}
+                    <p class="research-description">{{ paper.description }}</p>
+                    {% endif %}
+                    {% if paper.links %}
                     <div class="research-links">
-                        <a href="#" class="research-link">Paper</a>
-                        <a href="#" class="research-link">Code</a>
-                        <a href="#" class="research-link">Data</a>
-                        <a href="#" class="research-link">Video</a>
+                        {% for link in paper.links %}
+                        <a href="{{ link.url }}" class="research-link"{% if link.url contains 'http' %} target="_blank"{% endif %}>{{ link.name }}</a>
+                        {% endfor %}
                     </div>
+                    {% endif %}
                 </div>
-
-                <div class="research-item">
-                    <h3 class="research-title">[Another Paper Title]</h3>
-                    <p class="research-authors">
-                        Co-author Name, <strong>Your Name</strong>, Final Co-author
-                    </p>
-                    <p class="research-venue">
-                        [Journal Name] [Year] • [Volume/Issue Numbers]
-                    </p>
-                    <p class="research-description">
-                        [Description of this paper's contribution. Focus on the impact and novelty of the work.
-                        What makes this research important?]
-                    </p>
-                    <div class="research-links">
-                        <a href="#" class="research-link">Paper</a>
-                        <a href="#" class="research-link">Supplementary</a>
-                        <a href="#" class="research-link">BibTeX</a>
-                    </div>
-                </div>
-
-                <div class="research-item">
-                    <h3 class="research-title">[Third Paper Title]</h3>
-                    <p class="research-authors">
-                        <strong>Your Name</strong>, Advisor Name
-                    </p>
-                    <p class="research-venue">
-                        [Workshop/Conference Name] [Year] • [Location or Publication Details]
-                    </p>
-                    <p class="research-description">
-                        [Description highlighting the key contributions and methodology. What techniques were used?
-                        What were the main results?]
-                    </p>
-                    <div class="research-links">
-                        <a href="#" class="research-link">Paper</a>
-                        <a href="#" class="research-link">Poster</a>
-                        <a href="#" class="research-link">Slides</a>
-                    </div>
-                </div>
-
-                <div class="research-item">
-                    <h3 class="research-title">[Preprint or Submitted Paper]</h3>
-                    <p class="research-authors">
-                        <strong>Your Name</strong>, Collaborator Name, Senior Author
-                    </p>
-                    <p class="research-venue">
-                        Under Review • Submitted to [Target Venue]
-                    </p>
-                    <p class="research-description">
-                        [Description of ongoing work. What are the preliminary findings? What is the expected impact?]
-                    </p>
-                    <div class="research-links">
-                        <a href="#" class="research-link">Preprint</a>
-                        <a href="#" class="research-link">Code (Coming Soon)</a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
+        {% endif %}
 
+        {% if site.data.research.preprints %}
+        <div class="content-section">
+            <h2>Preprints & Under Review</h2>
+            <div class="research-grid">
+                {% for paper in site.data.research.preprints %}
+                <div class="research-item">
+                    <h3 class="research-title">{{ paper.title }}</h3>
+                    <p class="research-authors">{{ paper.authors }}</p>
+                    <p class="research-venue">{{ paper.venue }}{% if paper.venue_details %} • {{ paper.venue_details }}{% endif %}</p>
+                    {% if paper.description %}
+                    <p class="research-description">{{ paper.description }}</p>
+                    {% endif %}
+                    {% if paper.links %}
+                    <div class="research-links">
+                        {% for link in paper.links %}
+                        <a href="{{ link.url }}" class="research-link"{% if link.url contains 'http' %} target="_blank"{% endif %}>{{ link.name }}</a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if site.data.research.projects %}
         <div class="content-section">
             <h2>Current Projects</h2>
-
             <div class="research-grid">
+                {% for project in site.data.research.projects %}
                 <div class="research-item">
-                    <h3 class="research-title">[Project Name]</h3>
+                    <h3 class="research-title">{{ project.title }}</h3>
                     <p class="research-venue">
-                        [Funding Agency] • [Project Duration] • [Role: PI/Co-PI/Researcher]
+                        {{ project.funding }} • {{ project.duration }} • {{ project.role }}
                     </p>
-                    <p class="research-description">
-                        [Description of the project goals, methodology, and expected outcomes.
-                        What problem is being addressed? Who are the collaborators?]
-                    </p>
+                    {% if project.description %}
+                    <p class="research-description">{{ project.description }}</p>
+                    {% endif %}
+                    {% if project.links %}
                     <div class="research-links">
-                        <a href="#" class="research-link">Project Page</a>
-                        <a href="#" class="research-link">Progress Reports</a>
+                        {% for link in project.links %}
+                        <a href="{{ link.url }}" class="research-link"{% if link.url contains 'http' %} target="_blank"{% endif %}>{{ link.name }}</a>
+                        {% endfor %}
                     </div>
+                    {% endif %}
                 </div>
-
-                <div class="research-item">
-                    <h3 class="research-title">[Another Project]</h3>
-                    <p class="research-venue">
-                        [Collaborative Project] • [Institution Partners] • [Timeline]
-                    </p>
-                    <p class="research-description">
-                        [Project description focusing on your specific contributions and the interdisciplinary
-                        aspects of the work.]
-                    </p>
-                    <div class="research-links">
-                        <a href="#" class="research-link">Collaboration Info</a>
-                        <a href="#" class="research-link">Preliminary Results</a>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
+        {% endif %}
 
+        {% if site.data.research.presentations %}
         <div class="content-section">
             <h2>Presentations & Talks</h2>
-
+            {% for presentation in site.data.research.presentations %}
             <div class="resume-item">
                 <div class="resume-header">
                     <div>
-                        <div class="resume-title">[Talk Title]</div>
-                        <div class="resume-company">[Conference/Event Name] • [Location]</div>
+                        <div class="resume-title">{{ presentation.title }}</div>
+                        <div class="resume-company">{{ presentation.event }} • {{ presentation.location }}</div>
                     </div>
-                    <div class="resume-date">[Date]</div>
+                    <div class="resume-date">{{ presentation.date }}</div>
                 </div>
+                {% if presentation.description %}
                 <div class="resume-description">
-                    <p>[Brief description of the talk and its reception]</p>
+                    <p>{{ presentation.description }}</p>
                 </div>
+                {% endif %}
             </div>
-
-            <div class="resume-item">
-                <div class="resume-header">
-                    <div>
-                        <div class="resume-title">[Invited Seminar Title]</div>
-                        <div class="resume-company">[Department/Institution] • [Location]</div>
-                    </div>
-                    <div class="resume-date">[Date]</div>
-                </div>
-                <div class="resume-description">
-                    <p>[Details about the invited talk]</p>
-                </div>
-            </div>
-
-            <div class="resume-item">
-                <div class="resume-header">
-                    <div>
-                        <div class="resume-title">[Poster Presentation]</div>
-                        <div class="resume-company">[Event Name] • [Location]</div>
-                    </div>
-                    <div class="resume-date">[Date]</div>
-                </div>
-                <div class="resume-description">
-                    <p>[Poster details and any awards received]</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
+        {% endif %}
 
+        {% if site.data.personal.research_interests %}
         <div class="content-section">
             <h2>Research Interests</h2>
             <div class="research-grid">
+                {% for interest in site.data.personal.research_interests %}
                 <div class="research-item">
-                    <h3 class="research-title">[Research Area 1]</h3>
-                    <p class="research-description">
-                        [Detailed description of your interest and expertise in this area.
-                        What specific problems do you work on?]
-                    </p>
+                    <h3 class="research-title">{{ interest.title }}</h3>
+                    <p class="research-description">{{ interest.description }}</p>
                 </div>
-
-                <div class="research-item">
-                    <h3 class="research-title">[Research Area 2]</h3>
-                    <p class="research-description">
-                        [Description of another key research interest and how it connects to your other work.]
-                    </p>
-                </div>
-
-                <div class="research-item">
-                    <h3 class="research-title">[Research Area 3]</h3>
-                    <p class="research-description">
-                        [Third area of expertise and your unique perspective on this field.]
-                    </p>
-                </div>
+                {% endfor %}
             </div>
         </div>
+        {% endif %}
 
+        {% if site.data.research.collaborators %}
         <div class="content-section">
             <h2>Collaboration & Service</h2>
             <p>
@@ -222,18 +148,26 @@ description: "Research work and publications by [Your Name]"
             <div class="content-section">
                 <h3>Current Collaborators</h3>
                 <ul>
-                    <li><a href="#">[Collaborator Name]</a> - [Institution] (working on [topic])</li>
-                    <li><a href="#">[Another Collaborator]</a> - [Institution] (working on [topic])</li>
-                    <li><a href="#">[Third Collaborator]</a> - [Institution] (working on [topic])</li>
+                    {% for collaborator in site.data.research.collaborators %}
+                    <li>
+                        {% if collaborator.url and collaborator.url != "#" %}
+                        <a href="{{ collaborator.url }}" target="_blank">{{ collaborator.name }}</a>
+                        {% else %}
+                        {{ collaborator.name }}
+                        {% endif %}
+                        - {{ collaborator.institution }} ({{ collaborator.topic }})
+                    </li>
+                    {% endfor %}
                 </ul>
             </div>
 
             <div class="text-center mt-2">
-                <a href="mailto:{{ site.author.email }}" class="professional-link">
+                <a href="mailto:{{ site.data.personal.email }}" class="professional-link">
                     <i class="fas fa-envelope"></i>
                     Contact for Collaboration
                 </a>
             </div>
         </div>
+        {% endif %}
     </div>
 </div>

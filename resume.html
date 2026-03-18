@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Resume"
-description: "Professional resume and CV of [Your Name]"
+description: "Professional resume and CV of {{ site.data.personal.name }}"
 ---
 
 <div class="page-header">
@@ -12,193 +12,173 @@ description: "Professional resume and CV of [Your Name]"
 
 <div class="page-content">
     <div class="container">
+        {% if site.data.resume.education %}
         <div class="resume-section">
             <h2>Education</h2>
-
+            {% for edu in site.data.resume.education %}
             <div class="resume-item">
                 <div class="resume-header">
                     <div>
-                        <div class="resume-title">Ph.D. in [Field]</div>
-                        <div class="resume-company">[University Name]</div>
+                        <div class="resume-title">{{ edu.degree }}</div>
+                        <div class="resume-company">{{ edu.institution }}</div>
+                        {% if edu.location %}
+                        <div class="resume-company">{{ edu.location }}</div>
+                        {% endif %}
                     </div>
-                    <div class="resume-date">[Start Year] - [End Year]</div>
+                    <div class="resume-date">{{ edu.start_year }} - {{ edu.end_year }}</div>
                 </div>
                 <div class="resume-description">
-                    <p><strong>Dissertation:</strong> [Dissertation Title]</p>
-                    <p><strong>Advisor:</strong> [Advisor Name]</p>
+                    {% if edu.dissertation %}
+                    <p><strong>Dissertation:</strong> {{ edu.dissertation }}</p>
+                    {% endif %}
+                    {% if edu.advisor %}
+                    <p><strong>Advisor:</strong> {{ edu.advisor }}</p>
+                    {% endif %}
+                    {% if edu.gpa %}
+                    <p><strong>GPA:</strong> {{ edu.gpa }}</p>
+                    {% endif %}
+                    {% if edu.details %}
                     <ul>
-                        <li>Research focus on [research area]</li>
-                        <li>[Achievement or notable coursework]</li>
-                        <li>[Any awards or distinctions]</li>
+                        {% for detail in edu.details %}
+                        <li>{{ detail }}</li>
+                        {% endfor %}
                     </ul>
+                    {% endif %}
                 </div>
             </div>
-
-            <div class="resume-item">
-                <div class="resume-header">
-                    <div>
-                        <div class="resume-title">M.S./B.S. in [Field]</div>
-                        <div class="resume-company">[University Name]</div>
-                    </div>
-                    <div class="resume-date">[Start Year] - [End Year]</div>
-                </div>
-                <div class="resume-description">
-                    <ul>
-                        <li>GPA: [if relevant]</li>
-                        <li>[Relevant coursework or projects]</li>
-                        <li>[Academic honors or achievements]</li>
-                    </ul>
-                </div>
-            </div>
+            {% endfor %}
         </div>
+        {% endif %}
 
+        {% if site.data.resume.experience %}
         <div class="resume-section">
             <h2>Professional Experience</h2>
-
+            {% for job in site.data.resume.experience %}
             <div class="resume-item">
                 <div class="resume-header">
                     <div>
-                        <div class="resume-title">[Job Title]</div>
-                        <div class="resume-company">[Company/Institution Name]</div>
+                        <div class="resume-title">{{ job.title }}</div>
+                        <div class="resume-company">{{ job.company }}</div>
+                        {% if job.location %}
+                        <div class="resume-company">{{ job.location }}</div>
+                        {% endif %}
                     </div>
-                    <div class="resume-date">[Start Date] - Present</div>
+                    <div class="resume-date">{{ job.start_date }} - {{ job.end_date }}</div>
                 </div>
                 <div class="resume-description">
+                    {% if job.responsibilities %}
                     <ul>
-                        <li>[Key responsibility or achievement]</li>
-                        <li>[Another responsibility or project]</li>
-                        <li>[Quantifiable result or impact]</li>
-                        <li>[Skills or technologies used]</li>
+                        {% for responsibility in job.responsibilities %}
+                        <li>{{ responsibility }}</li>
+                        {% endfor %}
                     </ul>
+                    {% endif %}
                 </div>
             </div>
-
-            <div class="resume-item">
-                <div class="resume-header">
-                    <div>
-                        <div class="resume-title">[Previous Job Title]</div>
-                        <div class="resume-company">[Company/Institution Name]</div>
-                    </div>
-                    <div class="resume-date">[Start Date] - [End Date]</div>
-                </div>
-                <div class="resume-description">
-                    <ul>
-                        <li>[Key responsibility or achievement]</li>
-                        <li>[Another responsibility or project]</li>
-                        <li>[Quantifiable result or impact]</li>
-                        <li>[Skills or technologies used]</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="resume-item">
-                <div class="resume-header">
-                    <div>
-                        <div class="resume-title">[Earlier Job Title]</div>
-                        <div class="resume-company">[Company/Institution Name]</div>
-                    </div>
-                    <div class="resume-date">[Start Date] - [End Date]</div>
-                </div>
-                <div class="resume-description">
-                    <ul>
-                        <li>[Key responsibility or achievement]</li>
-                        <li>[Another responsibility or project]</li>
-                        <li>[Skills or technologies used]</li>
-                    </ul>
-                </div>
-            </div>
+            {% endfor %}
         </div>
+        {% endif %}
 
+        {% if site.data.personal.skills %}
         <div class="resume-section">
             <h2>Skills & Technologies</h2>
 
+            {% if site.data.personal.skills.programming_languages %}
             <div class="content-section">
                 <h3>Programming Languages</h3>
-                <p>Python, R, JavaScript, Java, C++, SQL, MATLAB, [others]</p>
+                <p>{{ site.data.personal.skills.programming_languages }}</p>
             </div>
+            {% endif %}
 
+            {% if site.data.personal.skills.tools_frameworks %}
             <div class="content-section">
                 <h3>Tools & Frameworks</h3>
-                <p>TensorFlow, PyTorch, scikit-learn, pandas, numpy, Git, Docker, AWS, [others]</p>
+                <p>{{ site.data.personal.skills.tools_frameworks }}</p>
             </div>
+            {% endif %}
 
+            {% if site.data.personal.skills.research_methods %}
             <div class="content-section">
                 <h3>Research Methods</h3>
-                <p>Statistical Analysis, Machine Learning, Data Visualization, Experimental Design, [others]</p>
+                <p>{{ site.data.personal.skills.research_methods }}</p>
             </div>
+            {% endif %}
 
+            {% if site.data.personal.skills.languages %}
             <div class="content-section">
                 <h3>Languages</h3>
-                <p>English (Native), [Other languages and proficiency levels]</p>
+                <p>{{ site.data.personal.skills.languages }}</p>
             </div>
+            {% endif %}
         </div>
+        {% endif %}
 
+        {% if site.data.resume.awards %}
         <div class="resume-section">
             <h2>Awards & Recognition</h2>
-
+            {% for award in site.data.resume.awards %}
             <div class="resume-item">
                 <div class="resume-header">
                     <div>
-                        <div class="resume-title">[Award Name]</div>
-                        <div class="resume-company">[Awarding Organization]</div>
+                        <div class="resume-title">{{ award.name }}</div>
+                        <div class="resume-company">{{ award.organization }}</div>
                     </div>
-                    <div class="resume-date">[Year]</div>
+                    <div class="resume-date">{{ award.year }}</div>
                 </div>
                 <div class="resume-description">
-                    <p>[Brief description of the award and why it was received]</p>
+                    <p>{{ award.description }}</p>
                 </div>
             </div>
-
-            <div class="resume-item">
-                <div class="resume-header">
-                    <div>
-                        <div class="resume-title">[Another Award]</div>
-                        <div class="resume-company">[Awarding Organization]</div>
-                    </div>
-                    <div class="resume-date">[Year]</div>
-                </div>
-                <div class="resume-description">
-                    <p>[Brief description of the award]</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
+        {% endif %}
 
+        {% if site.data.resume.professional_activities %}
         <div class="resume-section">
             <h2>Professional Activities</h2>
 
+            {% if site.data.resume.professional_activities.editorial %}
             <div class="content-section">
                 <h3>Editorial & Review Work</h3>
                 <ul>
-                    <li>Reviewer for [Journal Names]</li>
-                    <li>Program Committee Member for [Conference Names]</li>
-                    <li>[Other editorial activities]</li>
+                    {% for item in site.data.resume.professional_activities.editorial %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
                 </ul>
             </div>
+            {% endif %}
 
+            {% if site.data.resume.professional_activities.memberships %}
             <div class="content-section">
                 <h3>Professional Memberships</h3>
                 <ul>
-                    <li>[Professional Organization 1]</li>
-                    <li>[Professional Organization 2]</li>
-                    <li>[Professional Organization 3]</li>
+                    {% for membership in site.data.resume.professional_activities.memberships %}
+                    <li>{{ membership }}</li>
+                    {% endfor %}
                 </ul>
             </div>
+            {% endif %}
 
+            {% if site.data.resume.professional_activities.teaching %}
             <div class="content-section">
                 <h3>Teaching & Mentoring</h3>
                 <ul>
-                    <li>[Teaching Assistant for Course Name] - [University] ([Year])</li>
-                    <li>[Guest Lecturer for Course Name] - [University] ([Year])</li>
-                    <li>[Mentored X undergraduate/graduate students]</li>
+                    {% for teaching in site.data.resume.professional_activities.teaching %}
+                    <li>{{ teaching.position }} - {{ teaching.institution }} ({{ teaching.year }})</li>
+                    {% endfor %}
                 </ul>
             </div>
+            {% endif %}
         </div>
+        {% endif %}
 
+        {% if site.data.links.cv_download.enabled %}
         <div class="text-center mt-2">
-            <a href="/path/to/cv.pdf" class="professional-link" target="_blank">
+            <a href="{{ site.data.links.cv_download.url }}" class="professional-link" target="_blank">
                 <i class="fas fa-download"></i>
-                Download Full CV (PDF)
+                {{ site.data.links.cv_download.text }}
             </a>
         </div>
+        {% endif %}
     </div>
 </div>

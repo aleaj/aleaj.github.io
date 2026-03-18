@@ -1,0 +1,61 @@
+# Professional and Social Links
+# Update these with your actual URLs
+
+# Main professional links (shown prominently on homepage)
+main_links:
+  - name: "Email"
+    icon: "fas fa-envelope"
+    url: "mailto:Alejandro.AndresJuanes@ista.ac.at"
+    description: "Send me an email"
+
+  - name: "LinkedIn"
+    icon: "fab fa-linkedin"
+    url: "https://linkedin.com/in/your-profile"
+    description: "Connect on LinkedIn"
+
+  - name: "GitHub"
+    icon: "fab fa-github"
+    url: "https://github.com/your-username"
+    description: "View my code on GitHub"
+
+  - name: "Google Scholar"
+    icon: "fas fa-graduation-cap"
+    url: "https://scholar.google.com/citations?user=your-id"
+    description: "View publications on Google Scholar"
+
+# Footer social links (shown in footer)
+footer_links:
+  - icon: "fas fa-envelope"
+    url: "mailto:Alejandro.AndresJuanes@ista.ac.at"
+    label: "Email"
+
+  - icon: "fab fa-linkedin"
+    url: "https://linkedin.com/in/your-profile"
+    label: "LinkedIn"
+
+  - icon: "fab fa-github"
+    url: "https://github.com/your-username"
+    label: "GitHub"
+
+  - icon: "fas fa-graduation-cap"
+    url: "https://scholar.google.com/citations?user=your-id"
+    label: "Google Scholar"
+
+  # Optional additional links
+  # - icon: "fab fa-twitter"
+  #   url: "https://twitter.com/your-handle"
+  #   label: "Twitter"
+
+  # - icon: "fab fa-orcid"
+  #   url: "https://orcid.org/your-id"
+  #   label: "ORCID"
+
+  # - icon: "fab fa-researchgate"
+  #   url: "https://researchgate.net/profile/your-profile"
+  #   label: "ResearchGate"
+
+# CV/Resume download link
+cv_download:
+  enabled: false  # Set to true when you have a CV to download
+  url: "/assets/cv.pdf"
+  text: "Download Full CV (PDF)"

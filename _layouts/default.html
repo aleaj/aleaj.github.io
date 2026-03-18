@@ -34,22 +34,15 @@
         <nav class="nav">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <a href="/" class="nav-logo-link">{{ site.author.name | default: "Your Name" }}</a>
+                    <a href="/" class="nav-logo-link">{{ site.data.personal.name }}</a>
                 </div>
 
                 <ul class="nav-menu" id="nav-menu">
+                    {% for nav_item in site.navigation %}
                     <li class="nav-item">
-                        <a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
+                        <a href="{{ nav_item.url }}" class="nav-link {% if page.url == nav_item.url or (nav_item.url != '/' and page.url contains nav_item.url) %}active{% endif %}">{{ nav_item.name }}</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="/resume/" class="nav-link {% if page.url contains '/resume' %}active{% endif %}">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/research/" class="nav-link {% if page.url contains '/research' %}active{% endif %}">Research</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/blog/" class="nav-link {% if page.url contains '/blog' %}active{% endif %}">Blog</a>
-                    </li>
+                    {% endfor %}
                 </ul>
 
                 <div class="nav-controls">
@@ -76,21 +69,14 @@
         <div class="footer-container">
             <div class="footer-content">
                 <div class="footer-links">
-                    <a href="mailto:{{ site.author.email }}" class="footer-link" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
+                    {% for link in site.data.links.footer_links %}
+                    <a href="{{ link.url }}" class="footer-link" aria-label="{{ link.label }}"{% if link.url contains 'http' %} target="_blank"{% endif %}>
+                        <i class="{{ link.icon }}"></i>
                     </a>
-                    <a href="#" class="footer-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="footer-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="footer-link" aria-label="Google Scholar">
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
+                    {% endfor %}
                 </div>
                 <div class="footer-text">
-                    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name | default: "Your Name" }}. All rights reserved.</p>
+                    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.data.personal.name }}. All rights reserved.</p>
                 </div>
             </div>
         </div>

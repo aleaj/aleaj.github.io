@@ -1,0 +1,47 @@
+# Personal Information
+name: "Alejandro Andres Juanes"
+email: "Alejandro.AndresJuanes@ista.ac.at"
+title: "Researcher & Developer"
+subtitle: "PhD Student in Computer Science"
+bio: |
+  Welcome to my personal website! I'm a passionate researcher and developer working on [your field of interest].
+  Here you'll find information about my research, professional experience, and thoughts on [your areas of expertise].
+
+extended_bio: |
+  Currently, I'm [current position/studies] at [institution/company], focusing on [research areas or projects].
+  My work involves [brief description of your work/research focus].
+
+# About section
+about: |
+  I am a [your profession/field] with a passion for [your interests]. My research focuses on [research areas],
+  and I have experience in [key skills/technologies]. I enjoy [personal interests] and am always eager to
+  collaborate on exciting projects.
+
+about_extended: |
+  My academic journey began at [university] where I studied [degree]. Since then, I've [brief career progression].
+  I'm particularly interested in [specific research interests] and how they can [impact/application].
+
+# Current status/news
+current_status: |
+  I'm currently working on [current project/research] and looking forward to [upcoming events/goals].
+
+# Research interests
+research_interests:
+  - title: "[Research Area 1]"
+    description: "[Brief description of your interest and expertise in this area. What specific problems do you work on?]"
+
+  - title: "[Research Area 2]"
+    description: "[Description of another key research interest and how it connects to your other work.]"
+
+  - title: "[Research Area 3]"
+    description: "[Third area of expertise and your unique perspective on this field.]"
+
+  - title: "[Research Area 4]"
+    description: "[Brief description]"
+
+# Skills and Technologies
+skills:
+  programming_languages: "Python, R, JavaScript, Java, C++, SQL, MATLAB, [others]"
+  tools_frameworks: "TensorFlow, PyTorch, scikit-learn, pandas, numpy, Git, Docker, AWS, [others]"
+  research_methods: "Statistical Analysis, Machine Learning, Data Visualization, Experimental Design, [others]"
+  languages: "English (Native), [Other languages and proficiency levels]"

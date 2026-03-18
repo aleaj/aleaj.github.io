@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Blog"
-description: "Blog posts and thoughts by [Your Name]"
+description: "Blog posts and thoughts by {{ site.data.personal.name }}"
 ---
 
 <div class="page-header">
@@ -20,131 +20,74 @@ description: "Blog posts and thoughts by [Your Name]"
             </p>
         </div>
 
+        {% if site.posts.size > 0 %}
+        <div class="blog-grid">
+            {% for post in site.posts %}
+            <div class="blog-post-card">
+                <div class="blog-post-content">
+                    <h3 class="blog-post-title">
+                        <a href="{{ post.url }}" style="color: inherit;">{{ post.title }}</a>
+                    </h3>
+                    <p class="blog-post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+                    <p class="blog-post-excerpt">
+                        {% if post.excerpt %}
+                            {{ post.excerpt | strip_html | truncatewords: 30 }}
+                        {% else %}
+                            {{ post.content | strip_html | truncatewords: 30 }}
+                        {% endif %}
+                    </p>
+                    <div class="research-links">
+                        <a href="{{ post.url }}" class="research-link">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- Fallback content if no posts exist yet -->
         <div class="blog-grid">
             <div class="blog-post-card">
                 <div class="blog-post-content">
-                    <h3 class="blog-post-title">
-                        <a href="/blog/getting-started-with-research/" style="color: inherit;">
-                            Getting Started with Research: A Graduate Student's Perspective
-                        </a>
-                    </h3>
-                    <p class="blog-post-date">March 15, 2024</p>
+                    <h3 class="blog-post-title">Welcome to My Blog</h3>
+                    <p class="blog-post-date">{{ 'now' | date: "%B %d, %Y" }}</p>
                     <p class="blog-post-excerpt">
-                        Starting graduate research can be overwhelming. In this post, I share some lessons learned
-                        during my first year and tips for new researchers...
+                        Welcome to my personal blog! I'll be sharing updates about my research,
+                        thoughts on academia, and insights from my work. Check back soon for new posts!
                     </p>
-                    <div class="research-links">
-                        <a href="/blog/getting-started-with-research/" class="research-link">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog-post-card">
-                <div class="blog-post-content">
-                    <h3 class="blog-post-title">
-                        <a href="/blog/tools-for-academic-writing/" style="color: inherit;">
-                            Essential Tools for Academic Writing and Research
-                        </a>
-                    </h3>
-                    <p class="blog-post-date">February 28, 2024</p>
-                    <p class="blog-post-excerpt">
-                        A comprehensive guide to the tools and workflows that have improved my academic writing
-                        and research productivity. From reference management to collaboration...
-                    </p>
-                    <div class="research-links">
-                        <a href="/blog/tools-for-academic-writing/" class="research-link">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog-post-card">
-                <div class="blog-post-content">
-                    <h3 class="blog-post-title">
-                        <a href="/blog/conference-experiences/" style="color: inherit;">
-                            My First Academic Conference: Lessons and Reflections
-                        </a>
-                    </h3>
-                    <p class="blog-post-date">January 20, 2024</p>
-                    <p class="blog-post-excerpt">
-                        Attending my first major academic conference was both exciting and nerve-wracking.
-                        Here are my takeaways and advice for first-time conference attendees...
-                    </p>
-                    <div class="research-links">
-                        <a href="/blog/conference-experiences/" class="research-link">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog-post-card">
-                <div class="blog-post-content">
-                    <h3 class="blog-post-title">
-                        <a href="/blog/research-methodology/" style="color: inherit;">
-                            Choosing the Right Research Methodology: A Beginner's Guide
-                        </a>
-                    </h3>
-                    <p class="blog-post-date">December 10, 2023</p>
-                    <p class="blog-post-excerpt">
-                        One of the biggest challenges in research is selecting the appropriate methodology.
-                        This post covers different approaches and how to choose the right one...
-                    </p>
-                    <div class="research-links">
-                        <a href="/blog/research-methodology/" class="research-link">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog-post-card">
-                <div class="blog-post-content">
-                    <h3 class="blog-post-title">
-                        <a href="/blog/work-life-balance/" style="color: inherit;">
-                            Maintaining Work-Life Balance in Academia
-                        </a>
-                    </h3>
-                    <p class="blog-post-date">November 15, 2023</p>
-                    <p class="blog-post-excerpt">
-                        Academic life can be demanding and all-consuming. Here are strategies I've learned
-                        for maintaining a healthy balance between research and personal life...
-                    </p>
-                    <div class="research-links">
-                        <a href="/blog/work-life-balance/" class="research-link">Read More</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog-post-card">
-                <div class="blog-post-content">
-                    <h3 class="blog-post-title">
-                        <a href="/blog/welcome/" style="color: inherit;">
-                            Welcome to My Blog
-                        </a>
-                    </h3>
-                    <p class="blog-post-date">October 1, 2023</p>
-                    <p class="blog-post-excerpt">
-                        Welcome to my personal blog! This is where I'll be sharing my thoughts on research,
-                        academia, and life as a graduate student. Stay tuned for regular updates...
-                    </p>
-                    <div class="research-links">
-                        <a href="/blog/welcome/" class="research-link">Read More</a>
-                    </div>
                 </div>
             </div>
         </div>
+        {% endif %}
 
         <div class="content-section">
             <h2>Categories</h2>
             <div class="research-links">
+                {% assign categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+                {% if categories.size > 0 %}
+                    {% for category in categories %}
+                        {% unless category == empty %}
+                        <a href="#" class="research-link">{{ category | strip }}</a>
+                        {% endunless %}
+                    {% endfor %}
+                {% else %}
                 <a href="#" class="research-link">Research</a>
                 <a href="#" class="research-link">Academia</a>
                 <a href="#" class="research-link">Tools & Tips</a>
                 <a href="#" class="research-link">Conferences</a>
                 <a href="#" class="research-link">Personal</a>
+                {% endif %}
             </div>
         </div>
 
         <div class="text-center mt-2">
             <p class="text-light">
-                Subscribe to my updates via <a href="#">RSS feed</a> or follow me on
-                <a href="#">Twitter</a> for the latest posts.
+                Subscribe to my updates via <a href="{{ site.url }}/feed.xml">RSS feed</a> or follow me on
+                {% for link in site.data.links.footer_links %}
+                    {% if link.label == "Twitter" %}
+                    <a href="{{ link.url }}" target="_blank">Twitter</a>
+                    {% endif %}
+                {% endfor %}
+                for the latest posts.
             </p>
         </div>
     </div>

@@ -1,118 +1,117 @@
 ---
 layout: default
 title: "Home"
-description: "Personal website of [Your Name] - researcher, developer, and academic"
+description: "Personal website of {{ site.data.personal.name }} - researcher, developer, and academic"
 ---
 
 <section class="hero">
     <div class="hero-container">
         <div class="hero-content">
-            <h1>Hello, I'm {{ site.author.name | default: "Your Name" }}</h1>
-            <p class="hero-subtitle">Researcher & Developer</p>
+            <h1>Hello, I'm {{ site.data.personal.name }}</h1>
+            <p class="hero-subtitle">{{ site.data.personal.title }}</p>
             <p class="hero-description">
-                Welcome to my personal website! I'm a passionate researcher and developer working on [your field of interest].
-                Here you'll find information about my research, professional experience, and thoughts on [your areas of expertise].
+                {{ site.data.personal.bio }}
             </p>
+            {% if site.data.personal.extended_bio %}
             <p class="hero-description">
-                Currently, I'm [current position/studies] at [institution/company], focusing on [research areas or projects].
-                My work involves [brief description of your work/research focus].
+                {{ site.data.personal.extended_bio }}
             </p>
+            {% endif %}
 
             <div class="professional-links">
-                <a href="mailto:{{ site.author.email }}" class="professional-link">
-                    <i class="fas fa-envelope"></i>
-                    Email
+                {% for link in site.data.links.main_links %}
+                <a href="{{ link.url }}" class="professional-link"{% if link.url contains 'http' %} target="_blank"{% endif %}>
+                    <i class="{{ link.icon }}"></i>
+                    {{ link.name }}
                 </a>
-                <a href="#" class="professional-link">
-                    <i class="fab fa-linkedin"></i>
-                    LinkedIn
-                </a>
-                <a href="#" class="professional-link">
-                    <i class="fab fa-github"></i>
-                    GitHub
-                </a>
-                <a href="#" class="professional-link">
-                    <i class="fas fa-graduation-cap"></i>
-                    Google Scholar
-                </a>
+                {% endfor %}
             </div>
         </div>
 
         <div class="hero-image">
-            <img src="/images/profile.jpg" alt="{{ site.author.name | default: 'Your Name' }}" class="profile-image">
+            <img src="/images/profile.jpg" alt="{{ site.data.personal.name }}" class="profile-image">
         </div>
     </div>
 </section>
 
 <section class="section">
     <div class="container">
+        {% if site.data.personal.about %}
         <div class="content-section">
             <h2>About Me</h2>
-            <p>
-                I am a [your profession/field] with a passion for [your interests]. My research focuses on [research areas],
-                and I have experience in [key skills/technologies]. I enjoy [personal interests] and am always eager to
-                collaborate on exciting projects.
-            </p>
-            <p>
-                My academic journey began at [university] where I studied [degree]. Since then, I've [brief career progression].
-                I'm particularly interested in [specific research interests] and how they can [impact/application].
-            </p>
+            <p>{{ site.data.personal.about }}</p>
+            {% if site.data.personal.about_extended %}
+            <p>{{ site.data.personal.about_extended }}</p>
+            {% endif %}
         </div>
+        {% endif %}
 
+        {% if site.homepage.show_latest_posts %}
         <div class="content-section">
             <h2>Latest Updates</h2>
             <div class="blog-grid">
+                {% assign post_limit = site.homepage.posts_count | default: 3 %}
+                {% for post in site.posts limit: post_limit %}
                 <div class="blog-post-card">
                     <div class="blog-post-content">
-                        <h3 class="blog-post-title">New Research Publication</h3>
-                        <p class="blog-post-date">March 2024</p>
+                        <h3 class="blog-post-title">
+                            <a href="{{ post.url }}" style="color: inherit;">{{ post.title }}</a>
+                        </h3>
+                        <p class="blog-post-date">{{ post.date | date: "%B %d, %Y" }}</p>
                         <p class="blog-post-excerpt">
-                            Recently published our latest research on [topic] in [journal/conference].
-                            This work explores [brief description]...
+                            {% if post.excerpt %}
+                                {{ post.excerpt | strip_html | truncatewords: 30 }}
+                            {% else %}
+                                {{ post.content | strip_html | truncatewords: 30 }}
+                            {% endif %}
+                        </p>
+                        <div class="research-links">
+                            <a href="{{ post.url }}" class="research-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <!-- Fallback content if no posts exist yet -->
+                <div class="blog-post-card">
+                    <div class="blog-post-content">
+                        <h3 class="blog-post-title">Welcome Post</h3>
+                        <p class="blog-post-date">{{ 'now' | date: "%B %d, %Y" }}</p>
+                        <p class="blog-post-excerpt">
+                            Welcome to my website! I'll be sharing updates about my research and projects here.
                         </p>
                     </div>
                 </div>
-
-                <div class="blog-post-card">
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">Conference Presentation</h3>
-                        <p class="blog-post-date">February 2024</p>
-                        <p class="blog-post-excerpt">
-                            Presented our work on [topic] at [conference name]. Great discussions with
-                            fellow researchers about [subject]...
-                        </p>
-                    </div>
-                </div>
-
-                <div class="blog-post-card">
-                    <div class="blog-post-content">
-                        <h3 class="blog-post-title">New Project Launch</h3>
-                        <p class="blog-post-date">January 2024</p>
-                        <p class="blog-post-excerpt">
-                            Excited to announce the launch of [project name], a [description].
-                            This project aims to [objectives]...
-                        </p>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
+            {% if site.posts.size > 0 %}
+            <div class="text-center mt-2">
+                <a href="/blog/" class="professional-link">
+                    <i class="fas fa-arrow-right"></i>
+                    View All Posts
+                </a>
+            </div>
+            {% endif %}
         </div>
+        {% endif %}
 
+        {% if site.data.personal.research_interests %}
         <div class="content-section">
             <h2>Research Interests</h2>
-            <p>
-                My research spans several interconnected areas:
-            </p>
+            {% if site.data.personal.current_status %}
+            <p>{{ site.data.personal.current_status }}</p>
+            {% endif %}
+            <p>My research spans several interconnected areas:</p>
             <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
-                <li>[Research area 1] - [brief description]</li>
-                <li>[Research area 2] - [brief description]</li>
-                <li>[Research area 3] - [brief description]</li>
-                <li>[Research area 4] - [brief description]</li>
+                {% for interest in site.data.personal.research_interests %}
+                <li><strong>{{ interest.title }}</strong> - {{ interest.description }}</li>
+                {% endfor %}
             </ul>
             <p>
                 I'm always interested in collaborating with researchers who share similar interests.
-                Feel free to <a href="mailto:{{ site.author.email }}">reach out</a> if you'd like to discuss
+                Feel free to <a href="mailto:{{ site.data.personal.email }}">reach out</a> if you'd like to discuss
                 potential collaborations or have questions about my work.
             </p>
         </div>
+        {% endif %}
     </div>
 </section>

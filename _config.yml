@@ -1,13 +1,13 @@
 # GitHub Pages Configuration
-title: "Your Name - Personal Website"
-description: "Personal website showcasing research, resume, and blog"
+title: "Alejandro Andres Juanes"
+description: "Welcome to my personal website"
 url: "https://aleaj.github.io"
 baseurl: ""
 
 # Author information
 author:
-  name: "Your Name"
-  email: "your.email@example.com"
+  name: "Alejandro Andres Juanes"
+  email: "Alejandro.AndresJuanes@ista.ac.at"
 
 # Build settings
 markdown: kramdown

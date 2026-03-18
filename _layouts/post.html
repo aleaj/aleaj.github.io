@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="page-header">
+    <div class="container">
+        <h1 class="page-title">{{ page.title }}</h1>
+        <p class="text-center text-light">
+            Published on {{ page.date | date: "%B %d, %Y" }}
+            {% if page.categories %}
+            in
+            {% for category in page.categories %}
+                <span style="background: var(--bg-light); padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.9rem;">{{ category }}</span>
+            {% endfor %}
+            {% endif %}
+        </p>
+    </div>
+</div>
+
+<div class="page-content">
+    <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+            {{ content }}
+
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-light);">
+                <div class="text-center">
+                    <p><strong>Enjoyed this post?</strong></p>
+                    <div class="professional-links" style="justify-content: center; margin-top: 1rem;">
+                        <a href="mailto:{{ site.author.email }}?subject=Re: {{ page.title }}" class="professional-link">
+                            <i class="fas fa-envelope"></i>
+                            Email Me
+                        </a>
+                        <a href="/blog/" class="professional-link">
+                            <i class="fas fa-arrow-left"></i>
+                            Back to Blog
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

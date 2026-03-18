@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    {% seo %}
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <a href="/" class="nav-logo-link">{{ site.author.name | default: "Your Name" }}</a>
+                </div>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/resume/" class="nav-link {% if page.url contains '/resume' %}active{% endif %}">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/research/" class="nav-link {% if page.url contains '/research' %}active{% endif %}">Research</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/blog/" class="nav-link {% if page.url contains '/blog' %}active{% endif %}">Blog</a>
+                    </li>
+                </ul>
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        {{ content }}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="mailto:{{ site.author.email }}" class="footer-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="#" class="footer-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="footer-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="footer-link" aria-label="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.author.name | default: "Your Name" }}. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

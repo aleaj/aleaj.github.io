@@ -1,0 +1,50 @@
+# GitHub Pages Configuration
+title: "Your Name - Personal Website"
+description: "Personal website showcasing research, resume, and blog"
+url: "https://aleaj.github.io"
+baseurl: ""
+
+# Author information
+author:
+  name: "Your Name"
+  email: "your.email@example.com"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files/folders from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+  - .asset-cache
+
+# Collections for blog posts
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# SEO and social
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag

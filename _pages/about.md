@@ -22,9 +22,10 @@ My research explores how quantum microwave fields can connect superconducting qu
 Before joining ISTA, I completed a master’s in Quantum Science and Technology at the Universitat de Barcelona, with my thesis in Adrian Bachtold’s Quantum Nanomechanics group at ICFO. I earned my bachelor’s in Physics at the Universidad de Salamanca. My earlier research spans carbon nanotube nanomechanics, graphene, and two-dimensional materials.
 
 <div class="intro-links">
-  <a href="mailto:Alejandro.AndresJuanes@ista.ac.at">Email</a>
-  <a href="https://scholar.google.com/citations?user=WGN_3N0AAAAJ">Scholar</a>
-  <a href="{{ '/assets/pdf/Alejandro_Andres_Juanes_CV.pdf' | relative_url }}">CV</a>
+  <a href="mailto:Alejandro.AndresJuanes@ista.ac.at"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
+  <a href="https://scholar.google.com/citations?user=WGN_3N0AAAAJ"><i class="ai ai-google-scholar" aria-hidden="true"></i> Scholar</a>
+  <a href="{{ '/assets/pdf/Alejandro_Andres_Juanes_CV.pdf' | relative_url }}"><i class="ai ai-cv" aria-hidden="true"></i> CV</a>
+  <a href="https://www.linkedin.com/in/alejandroandresjuanes"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
 </div>
 
 <section class="home-section selected-publications" aria-labelledby="selected-publications-heading">

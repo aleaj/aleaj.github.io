@@ -7,8 +7,6 @@ nav: true
 nav_order: 3
 ---
 
-Talks and posters where I am listed as first author on the [Fink group’s presentations page](https://quantumids.com/talks/).
-
 ## 2026
 
 - **Entangling remote qubits through a two-mode squeezed reservoir** — Poster. 6th quantA Workshop, Innsbruck, Austria, April 9, 2026.

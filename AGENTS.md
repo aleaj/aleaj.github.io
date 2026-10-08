@@ -89,3 +89,7 @@ All seven `test/integration_*.sh` scripts are gated by `unit-tests.yml`; run the
 - `.agents/skills/al-folio-bootstrap/SKILL.md` — new-site setup workflow.
 - `.agents/skills/al-folio-v1-migration/SKILL.md` — customized-fork migration and override drift auditing.
 - `.codex/skills` and `.claude/skills` are symlinks to `.agents/skills` for agent-specific discovery.
+
+## Personal site editorial preference
+
+Keep public pages focused on academic content. Do not add explanations about where lists were sourced, how entries were selected, or why publications and preprints were combined. Put editing rationale in agent updates rather than on the website.

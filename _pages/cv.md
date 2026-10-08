@@ -3,7 +3,7 @@ layout: cv
 permalink: /cv/
 title: CV
 nav: true
-nav_order: 3
+nav_order: 4
 cv_pdf: /assets/pdf/Alejandro_Andres_Juanes_CV.pdf
 cv_format: rendercv
 description: Education, research experience, and academic activities.

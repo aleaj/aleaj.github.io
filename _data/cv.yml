@@ -49,6 +49,31 @@ cv:
         publisher: Physical Review X 16, 031005
         summary: "A. Andrés-Juanes, J. Agustí, R. Sett, E. S. Redchenko, L. N. Kapoor,
           S. Hawaldar, P. Rabl, J. M. Fink. Preprint: arXiv:2510.07139."
+      - title: Granular aluminum induced superconductivity in germanium for hole spin-based hybrid devices
+        authors:
+          - Giorgio Fabris et al. (including Alejandro Andres Juanes)
+        journal: arXiv preprint
+        date: "2026-02-24"
+        url: https://arxiv.org/abs/2602.21364
+        publisher: arXiv:2602.21364
+      - title: Towards distributing qubit entanglement in open waveguides using entangled microwave radiation
+        authors:
+          - Alejandro Andrés Juanes, Riya Sett, Joan Agustí Bruzón, Peter Rabl, Johannes M. Fink
+        journal: APS Global Physics Summit (conference abstract)
+        date: "2025-03-19"
+        url: https://summit.aps.org/events/MAR-M09/13
+      - title: Experimental progress towards a cryogenic phase-conjugate receiver for microwave quantum illumination
+        authors:
+          - Riya Sett, Alejandro A. Juanes, Joan Agusti, Shabir Barzanjeh, Peter Rabl, Johannes M. Fink
+        journal: APS March Meeting Abstracts, W52.009
+        date: "2024-03-07"
+        url: https://meetings-archive.aps.org/mar/2024/w52/9
+      - title: High-impedance superconducting resonator for the dispersive readout of a nanomechanical qubit
+        authors:
+          - Alejandro Andrés Juanes
+        journal: Master’s thesis, Universitat de Barcelona
+        date: "2022-08"
+        url: https://hdl.handle.net/2445/189550
     Technical Skills:
       - label: Programming
         details: Python, QUA, MATLAB, Fortran
@@ -67,13 +92,20 @@ cv:
         summary: Intermediate
       - name: German
         summary: Intermediate
-    Talks and Schools:
-      - bullet: Invited talk at SM2Q, Glasgow — November 2025.
-      - bullet: Contributed talk at FisMat25, Venice — July 2025.
-      - bullet: Talk at APS March Meeting, Anaheim — March 2025.
+    Presentations:
+      - bullet: "Entangling remote qubits through a two-mode squeezed reservoir — Poster. 6th quantA Workshop, Innsbruck, Austria, April 9, 2026."
+      - bullet: "Entangling remote qubits through a two-mode squeezed reservoir — Poster. Quantum Optics School, Obergurgl, Austria, February 22, 2026."
+      - bullet: "Entangling remote qubits through a two-mode squeezed reservoir — Talk. SM2Q, University of Glasgow, Scotland, November 19, 2025."
+      - bullet: "Entangling remote qubits through a two-mode squeezed reservoir — Talk. Common Scientific Meeting, ISTA, Klosterneuburg, Austria, October 15, 2025."
+      - bullet: "Entangling remote qubits through a two-mode squeezed reservoir — Talk. Quantum Information Seminar, CSIC, Madrid, Spain, September 24, 2025."
+      - bullet: "Continuous variable entanglement meets qubits — Poster · Best poster award. Low Temperature Quantum Detectors, Helsinki, Finland, August 3–7, 2025."
+      - bullet: "Continuous-to-discrete variable entanglement distribution with superconducting circuits — Talk. FisMat2025, Venice, Italy, July 7–11, 2025."
+      - bullet: "Towards distributing qubit entanglement in open waveguides using entangled microwave radiation — Talk. APS Global Physics Summit, Anaheim, California, USA, March 16–21, 2025."
+      - bullet: "Entangling superconducting qubits with continuous-variable entangled light — Poster. SFB BeyondC Winter Workshop, ISTA, Klosterneuburg, Austria, February 25–26, 2025."
+      - bullet: "Towards distributing qubit entanglement using two-mode squeezed radiation — Poster. 2nd quantA Workshop, ISTA, Klosterneuburg, Austria, June 13–14, 2024."
+      - bullet: "Entanglement of two distant transmon qubits using Gaussian-correlated beams — Poster. SFB BeyondC Autumn Workshop, Innsbruck, Austria, September 11–12, 2023."
+    Schools:
       - bullet: "Quantum Science: Implementations summer school, Benasque — June 2024."
-      - bullet: Poster at the 2nd QuantA Workshop — June 2024.
-      - bullet: Poster at the SFB BeyondC Autumn Workshop — September 2023.
       - bullet: VCQ Summer School — September 2023.
       - bullet: ICFO Frontiers of Light School on Quantum Materials — June 2022.
       - bullet: QuantuMatter Conference — June 2022.

@@ -1,34 +1,33 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-
+subtitle: PhD student · <a href="https://ista.ac.at/">Institute of Science and Technology Austria</a>
+selected_papers: true
+social: true
 announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
+  enabled: false
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a PhD student in **Johannes Fink’s group** at the Institute of Science and Technology Austria (ISTA), where I study **superconducting circuits, quantum optics, and remote qubit entanglement**.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research explores how quantum microwave fields can connect superconducting qubits and establish entanglement between them. I work across circuit design, nanofabrication, and experimental measurement, with an interest in the interface between quantum optics and solid-state quantum devices.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Before joining ISTA, I completed a master’s in Quantum Science and Technology at the Universitat de Barcelona, with my thesis in Adrian Bachtold’s Quantum Nanomechanics group at ICFO. I earned my bachelor’s in Physics at the Universidad de Salamanca. My earlier research spans carbon nanotube nanomechanics, graphene, and two-dimensional materials.
+
+Explore my [research]({{ '/projects/' | relative_url }}), [publications]({{ '/publications/' | relative_url }}), and [CV]({{ '/cv/' | relative_url }}).
+
+### Selected talks and recognition
+
+- **Invited talk**, SM2Q, Glasgow — November 2025.
+- **Best poster award**, Low Temperature Quantum Detectors, Helsinki — August 2025.
+- **Contributed talks**, FisMat25, Venice — July 2025; APS March Meeting, Anaheim — March 2025.
+- **First prize**, Quantum Ideas Factory Hackathon, Heidelberg — November 2021.
+
+### Beyond the lab
+
+I serve as ISTA’s VCQ student speaker and as a physics track student representative. Outside physics, I enjoy music: I studied clarinet and piano for ten years at the Professional Conservatory of Salamanca, completing the middle degree in B-flat clarinet.
+
+**Based at:** ISTA, Am Campus 1, 3400 Klosterneuburg, Austria.

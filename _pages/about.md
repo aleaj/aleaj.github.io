@@ -3,6 +3,10 @@ layout: about
 title: About
 permalink: /
 subtitle: PhD student · <a href="https://ista.ac.at/">Institute of Science and Technology Austria</a>
+profile:
+  align: right
+  image: alejandro-andres-juanes.jpg
+  image_circular: false
 selected_papers: true
 social: true
 announcements:

@@ -3,7 +3,7 @@ layout: page
 permalink: /blog/
 title: Blog
 description: Research notes.
-nav: true
+nav: false
 nav_order: 4
 ---
 

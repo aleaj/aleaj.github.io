@@ -58,7 +58,7 @@ search_enabled: true
 socials_in_search: true
 posts_in_search: true
 bib_search: true
-max_width: 930px
+max_width: 860px
 serve_og_meta: true
 serve_schema_org: true
 og_image: null
@@ -267,7 +267,7 @@ filtered_bibtex_keywords:
   - website
 max_author_limit: 3
 more_authors_animation_delay: 10
-enable_publication_thumbnails: false
+enable_publication_thumbnails: true
 external_links:
   enabled: true
   rel: external nofollow noopener

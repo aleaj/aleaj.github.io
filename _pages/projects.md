@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research / Projects
+title: Research
 permalink: /projects/
 description: From quantum microwave networks to nanoscale devices.
 nav: true
